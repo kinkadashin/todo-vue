@@ -5,19 +5,19 @@
 <template>
     <form @submit.prevent="props.cadastraTarefa">
         <div class="row">
-            <div class="col">
+            <div class="col col">
                 <input :value="props.tarefaTemp" @change="props.editaTarefaTemp" class="form-control" type="text" required placeholder="Digite aqui a descrição da tarefa">
             </div>
             <div class="col-md-2">
                 <button class="btn btn-primary" type="submit">Cadastrar</button>
             </div>
-        </div>
-        <div class="col-md-2">
-            <select @change="props.trocarFiltro" class="form-control">
-                <option value="todas">Todas Tarefas</option>
-                <option value="pendentes">Pendentes</option>
-                <option value="finalizadas">Finalizadas</option>
-            </select>
+            <div class="col-md-2">
+                <select @change="props.trocarFiltro" class="form-control">
+                    <option value="todas">Todas Tarefas</option>
+                    <option value="pendentes">Pendentes</option>
+                    <option value="finalizadas">Finalizadas</option>
+                </select>
+            </div>
         </div>
     </form>
 </template>
